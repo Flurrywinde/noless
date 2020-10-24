@@ -4,10 +4,6 @@
 
 # Description: Runs a command (with its parms, if any) unbuffered to keep any ansi escape codes (e.g. color) from being stripped, e.g. for man pages, then kills it, after one second and erases the last line. Thus, what this effectively does is let you `cat` a short man page (or the first page of a man page longer than your screen), but keep the color, which seems otherwise impossible, i.e. `man -P cat` still strips out the ansi sequences.
 
-# Example of cool things I've learned while research another thing, aka even more useless things I learned while trying to figure out how to do some useless thing.
-
-# Caveats
-
 # Get number of already running processes ps and grep will be looking for
 grepsrch="/[u]sr/bin/unbuffer $@" # Why did $2 get interpreted as the file when this string was grep's parm directly?
 pscount=$(ps ax | grep -c "$grepsrch")
