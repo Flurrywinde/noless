@@ -12,4 +12,4 @@ Do something like: `noless man man`. This will run `man` but show only the first
 
 ## How It Works
 
-It uses `unbuffer` (from `expect`)...
+It uses `unbuffer` (from `expect`) to trick `man` (or whatever other command you loose it upon) into thinking its outputting to the terminal like usual.
